@@ -30,3 +30,20 @@ if (temperature < 0) {
   }
   
   console.log("Now you're ready to go outside!");
+
+  const IsCitizen = true;
+  const age = 26;
+
+  if (IsCitizen && age > 18) {
+    console.log("You are eligible to vote.");
+  }
+
+  if (temperature < -40 || temperature > 40) {
+    console.log("Maybe going outside isn't such a great idea...");
+
+  }
+
+  if (!raining) {
+    console.log("Leave your umbrella at home!");
+  }
+  //  end  here
