@@ -1,8 +1,10 @@
 
+const name = ["Ezechiel"];
+const yearOfBirth = [1962];
+const currentYear = [2021];
+
 const ageCalculator = function () {
-  const name = ['Suzie', 'Jack', 'Ali'];
-  const yearOfBirth = ['1983', '2004', '2016'];
-  const currentYear = ['2016', '2016', '2016'];
+
   let result = [];
 
   for (let i = 0; i < name.length; i++) {
@@ -17,16 +19,11 @@ const ageCalculator = function () {
   console.log('NAME===>' +name);
   console.log('RESULT===>' + result);
 
- return {
+ /*return {
    name: name,
    result: result,
- };
+ }; */
 }
-const resultat = ageCalculator();
 
-console.log(resultat +'  <===resulta');
-//for (let i of resultat) {
-//console.log(resultat[i]);
-//  console.log(resultat.name[i] +' is ' + resultat.result[i]+' year old.');
-//}
+console.log(ageCalculator("Miranda", 1983, 2015));
 
