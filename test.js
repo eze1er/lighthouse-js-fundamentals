@@ -1,11 +1,27 @@
-var start = 0;
-var end = 15;
-var step = 2;
-var some_array = [];
+var umbrella = {
+    color: "pink",
+    isOpen: true,
+    isClose: true,
+    open: function() {
+        if (umbrella.isOpen === true) {
+            return "The umbrella is already opened!'";
+            } else {
+                umbrella.isOpen = true;
+                return "julia opens the umbrella!";
+            }
+    }};
+    umbrella = {
+          color: "pink",
+        isOpen: true,
+        isClose: true,
+        close: function() {
+          if (umbrella.isClose === true) {
+            return "the umbrella is already closed!";
+         }
+         else {
+            umbrella.isClose = true;
+            return "Julia closethe umbrella";
+        }
+    }
+    };
 
-for ( var i = start; i <  end; i = i + step) {
-
-      some_array.push(i);
-	console.log("IIIIIIIIII====" +i);
-	console.log(some_array);
-  }
