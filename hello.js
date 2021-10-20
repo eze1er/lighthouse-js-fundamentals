@@ -12,7 +12,6 @@ const sayHelloToConsole = function(name) {
 
 sayHelloToConsole('John');
 
-
 const returnSayHello = function(name) {
   return "Hello, " + name;
 }
