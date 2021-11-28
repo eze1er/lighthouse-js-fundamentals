@@ -1,0 +1,54 @@
+
+    for (let i = 0; i < data1.length; i++) {
+      console.log('data vide ?? ==', data1[i]);
+      
+      if (data1[i] === '=') {
+        if (keyIndex === 0) {
+          keyTemp.push(data1[i].replace(/=/g,": "));
+          keyName.join('');
+          keyName.push(keyTemp);
+          console.log('Premier key === ', data1[i].replace(/=/g,": "));
+          keyIndex = 1;
+          keyTemp = [];
+        } else
+        {
+          keyTemp.push(data1[i].replace(/=/g,": "));
+          valueName.push(keyTemp);
+          keyName.join('');
+          keyName.push(keyTemp);
+          console.log('2em key === ', keyTemp);
+          valueTemp = [];
+        }
+      } 
+      else if (data1[i] === '%') || (deta1[i] === '2') || (detail[i] === '0') {
+        valueTemp.push(data1[i].replace(/%20/g," "));
+        valueTemp.join('');
+        valueName.push(valueTemp);
+        console.log('Premier key V === ', data1[i]);
+        valueTemp = [];
+      } else {
+        valueTemp.push(data1[i]);
+        console.log('ValueTem === ', valueTemp, 'data1[x]', data1[i]);
+      }
+      valueTemp.join('');
+      valueName.push(valueTemp);
+    }
+    
+    class  result {
+
+    constructor(keyNameF, valueNameF) {
+        this.keyNameF = keyName;
+        this.valueF = valueName;
+    }
+
+    getName() {
+        return this.keyNameF + " " + this.valueNameF;
+    }
+    }
+}
+
+console.log(urlDecode("duck=rubber"));
+console.log(urlDecode("bootcamp=Lighthouse%20Labs"));
+console.log(urlDecode("city=Vancouver&weather=lots%20of%20rain"));
+console.log(urlDecode("city=Vancouver&weather=lots%20of%20rain"));
+

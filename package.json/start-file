@@ -1,0 +1,47 @@
+let prompt = require("prompt-sync")();
+
+// code below (replace this example)
+let nbr = 0;
+let x = Math.floor((Math.random() * 100) + 1);
+console.log("this xxx is the number == ", x)
+
+let save = [];
+let answer = prompt("Guess a number between 1 to 100: ");
+
+for (let i =1; i < 7; i++) { 
+
+  parseInt(answer); 
+
+  if (typeof answer !== 'number') {
+    i--;
+    answer = prompt('not a number! Try again!')
+
+  } 
+  else { 
+    save.forEach(element => {
+      if (save.element = element) {
+        answer = prompt('Already Guessed!\nGuess a number between 1 to 100: ');
+       
+      }
+      else {
+        save.push(answer);
+        nbr++;
+      }
+    });
+  }
+  if (answer === x) {
+    console.log("You got it! You took "+ nbr+" attempts!");
+  } else
+  if (answer < x) {
+    answer = prompt('Too Low!\nGuess a number between 1 to 100: ');
+    save.push(answer);
+    nbr++;
+  } else 
+  if (answer > x) {
+    answer = prompt('Too high!\nGuess a number between 1 to 100: ');
+    save.push(answer);
+    nbr++;
+  }
+}
+console.log("this is xxx at end == ", x);
+

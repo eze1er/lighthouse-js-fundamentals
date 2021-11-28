@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery Crash Course | Selectors</title>
+  <!-- this code line is important for to use JQuery  -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body{
+      font-size: 17;
+      font-family: arial;
+      background-color: #f4f4f4;
+      line-height: 1.5em;
+    }
+    header{
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px #000 solid;
+      margin-bottom: 10px;
+    }
+    #container {
+      width: 90%;
+      margin: auto;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JQuery Crash Course</h1>
+  </header>
+  <div id="container">
+<h1 id="heading1">Heading One</h1>
+  <p id="para1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, quasi? Quidem ex a, dolorem debitis tempora repellendus soluta aliquid assumenda fugit adipisci, nostrum blanditiis eligendi incidunt. Magni aliquid commodi totam? <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde tenetur quae cupiditate, velit voluptate accusamus consequatur, aut aperiam natus quod nobis assumenda enim aliquid exercitationem excepturi ea tempora aspernatur sint!</span></p>
+<h1 class="heading2">Heading One</h1>
+  <p id="para2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, quasi? Quidem ex a, dolorem debitis tempora repellendus soluta aliquid assumenda fugit adipisci, nostrum blanditiis eligendi incidunt. Magni aliquid commodi totam?<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex accusantium, sint atque optio harum quidem minus laborum sequi quibusdam deserunt, asperiores quam, unde perspiciatis tenetur quia dolorum fugiat repellat eaque.</span></p>
+
+  <ul id="list">
+    <li>List Item</li>
+    <li>List Item</li>
+    <li>List Item</li>
+    <li>List Item</li>
+    <li>List Item</li>
+    <li>List Item</li>
+    <li>List Item</li>
+  </ul>
+  <input type="button" value="Button 1">
+  <input type="submit" value="Button 2">
+  <input type="text" placeholder="Oops!">
+
+  <a href="http://google.com">Google</a>
+  <a href="http://yahoo.com">Yahoo</a>
+
+  </div>
+  <script>
+    // how we can use selector elements: h1, div,id, class, attribute... and use the css to create some style in the web by using Jquery selector.
+
+    // .hide help to hide the 'h1'
+  //  $('h1').hide();
+  // $('h1#heading1').hide(); // just the classe heading1 will hide.
+  // $('p span').css('color', 'red');
+  $('ul#list li:first').css('color', 'red');
+  $('ul#list li:last').css('color', 'blue');
+  $('ul#list li:odd').css('background-color', 'yellow');
+  $('ul#list li:even').css('background-color', '#cccccc');
+  $('ul#list li:nth-child(3n)').css('list-style', 'none');
+  $(':button').hide();
+  $('[href]').css('color', 'red');
+  $('a[href="http://yahoo.com"]').css('color', 'green');
+  // $('*').hide(); // evrything disapear or cleanup the screen
+  $('*').css('background-color', '#777777');
+
+  </script>
+</body>
+</html>

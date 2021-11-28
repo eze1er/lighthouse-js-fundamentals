@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery Crash Course | Selectors</title>
+  <!-- this code line is important for to use JQuery  -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body{
+      font-size: 17;
+      font-family: arial;
+      background-color: #f4f4f4;
+      line-height: 1.5em;
+    }
+    header{
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px #000 solid;
+      margin-bottom: 10px;
+    }
+    #container {
+      width: 90%;
+      margin: auto;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JQuery Crash Course</h1>
+  </header>
+
+<div id="container"> 
+  <h3>Mouse Events</h3>
+  <button id="btn1" class="btnclass">Button</button>
+  <button id="btn2">Button</button> 
+  <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem iste reiciendis expedita minus, similique, quisquam animi rerum suscipit architecto laborum assumenda mollitia a nulla quod earum ipsa vero enim aspernatur.</p>
+
+  <!-- <h1 id="coords"></h1> -->
+  <hr>
+  <form id="form">
+    <label>Name</label>
+    <br>
+    <input type="text" id="name" name="name">
+    <br>
+    <label>Email</label>
+    <br>
+    <input type="email" id="email" name="email">
+    <br>
+    <label>Gender</label>
+    <br>
+    <select id="gender" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+</div>
+  <script>
+    // $(document).ready prevent the function to npt running before the document is loaded
+    $(document).ready(function(){
+      // $('#btn1').click(function(){
+      // alert('Button clicked');
+      // });
+
+      // tis one work same way like the one on top 
+
+      // $('#btn1').on('click',function(){
+      // alert('Button clicked');
+      // });
+
+      // $('#btn1').on('click',function(){
+      // $('.para1').hide();
+      // });
+      // $('#btn2').on('click',function(){
+      // $('.para1').show();
+      // });
+
+      // or we can use toggle
+
+      // $('#btn1').on('click',function(){
+      // $('.para1').toggle();
+      // });
+
+      // // toggle start after double click
+      // $('#btn1').dblclick(function(){
+      //  $('.para1').toggle();
+      // });
+
+      // toggle start when the mouse in hover button
+      // $('#btn1').hover(function(){
+      //  $('.para1').toggle();
+      // });
+
+      // // shorthand for mouse enter and mouse leave.
+      // $('#btn1').on('mouseenter', function(){
+      //  $('.para1').toggle();
+      // });
+      // $('#btn1').on('mouseleave', function(){
+      //  $('.para1').toggle();
+      // });
+
+      // $('#btn1').on('mousemove', function(){
+      //  $('.para1').toggle();
+      // });
+
+      // mouse up and down event
+      // $('#btn1').on('mousedown', function(){
+      //  $('.para1').toggle();
+      // });
+      // $('#btn1').on('mouseup', function(){
+      //  $('.para1').toggle();
+      // });
+
+      // for to see how it work inside console log 
+
+      // $('#btn1').click(function(e){
+      //  console.log(e);
+      // });
+
+      // $('#btn1').click(function(e){
+      //  alert(e.currentTarget.id);
+      // });
+
+      // $('#btn1').click(function(e){
+      //  alert(e.currentTarget.innerHTML);
+      // });
+
+      // $('#btn1').click(function(e){
+      //  alert(e.currentTarget.outerHTML);
+      // });
+
+      // $('#btn1').click(function(e){
+      //  alert(e.currentTarget.className);
+      // });
+
+        // here we have the position of element in the web page
+
+      // $('#btn1').on('mousemove', function(e){
+      //  console.log('Coords: Y: '+e.clientY+"X: "+e.clientX);
+      // });
+
+      // $(document).on('mousemove', function(e){
+      //  $('#coords').html('Coords: Y: '+e.clientY+" X: "+e.clientX);
+      // });
+
+      // $('input').focus(function(){
+      //   $('input#name').css('background', 'yellow');
+      // })
+
+      // $('input').focus(function(){
+      //   $(this).css('background', 'yellow');
+      // })
+
+      $('input').focus(function(){
+        $(this).css('background', 'yellow');
+      })
+      $('input').blur(function(){
+        $(this).css('background', 'white');
+      })
+      // if add this one look
+      // $('input').keyup(function(){
+      //   console.log('keyup');
+      // })
+
+      // or
+
+      $('input').keyup(function(){
+        console.log('keyup');
+      })
+            // $('input').keyup(function(e){
+      //   console.log(e.target.value);
+      // })
+
+      // $('select#gender').change(function(){
+      //   alert('Changed');
+      // })
+
+      // $('select#gender').change(function(e){
+      //   alert(e.target.value);
+      // });
+      // $('#form').submit(function(e){
+      //   e.preventDefault();
+      //   let name = $('input#email').val();
+      //   console.log(name);
+      // });
+
+
+    });
+
+
+
+  </script>
+</body>
+</html>

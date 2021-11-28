@@ -1,0 +1,73 @@
+let prompt = require("prompt-sync")();
+
+// code below (replace this example)
+let nbr = 0;
+let x = Math.floor((Math.random() * 100) + 1);
+console.log("this xxx is the number == ", x);
+
+let thisIsTrue = false;
+
+let save = [];
+let answer = prompt("Guess a number between 1 to 100: ");
+
+  for (let i =1; i < 7; i++) { 
+
+    answer = parseInt(answer); 
+
+   if (typeof answer !== 'number') {
+    i--;
+    answer = prompt('not a number! Try again!')
+
+   } 
+   else { 
+     save.forEach(element => {
+      if (save.element === element) {
+        console.log('Already in save !');
+        console.log('element = ',element);
+        answer = prompt('Guess a number between 1 to 100: ');
+
+      }
+      else {
+        save.push(answer);
+        console.log('element when push == ', element);
+      }
+    });
+    
+   }
+   if (answer === x) {
+     console.log("You got it! You took "+ nbr+" attempts!");
+     thisIsTrue = true;
+   } else
+   if (answer < x) {
+     save.push(answer);
+     nbr++;
+     console.log('Too Low!');
+     answer = prompt('Guess a number between 1 to 100: ');
+   
+   } else 
+   if (answer > x) {
+     save.push(answer);
+     nbr++;
+     console.log('Too high!');
+     answer = prompt('Guess a number between 1 to 100: ');
+   }
+   if (i === 7-1) {
+      thisIsTrue = true
+  }
+}
+  
+  exports.test = function(request, response, cb){
+
+    if (thisIsTrue) {
+        response.send('All is good!');
+        cb(null, response)
+    } else {
+        response.send('ERROR! ERROR!');
+        return cb("THIS ISN'T TRUE!");
+     }
+
+    console.log('I do not want this to happen. If there is an error.');
+
+  };
+
+

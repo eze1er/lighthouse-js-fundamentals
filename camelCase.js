@@ -1,4 +1,4 @@
-
+// camelCase fubction
 function camelCase(input)
 {
   var array1 = input.split(' ');

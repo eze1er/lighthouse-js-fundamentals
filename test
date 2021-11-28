@@ -1,0 +1,20 @@
+const urlDec = function(instructors) {
+    // Put your solution here
+    let organize = {};
+
+    instructors.forEach(function(elem) {
+        if (!organize[elem.course]) {
+            organize[elem.course] = [];
+            organize[elem.course].push(elem.name);
+          }  else {
+                organize[elem.course].push(elem.name);
+
+            }
+        });
+        return organize
+    };
+
+    console.log(urlDecode("duck=rubber"));
+console.log(urlDecode("bootcamp=Lighthouse%20Labs"));
+console.log(urlDecode("city=Vancouver&weather=lots%20of%20rain"));
+console.log(urlDecode("city=Vancouver&weather=lots%20of%20rain").weather);
